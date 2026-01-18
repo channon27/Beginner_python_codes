@@ -1,4 +1,4 @@
-Sent from my iPhone
+
 # My Python Journey (Year 9)
 
 Welcome to my repository! I started learning Python when I was 13. My goal is to master the basics by doing 10-15 Mimo levels every week.
