@@ -1,0 +1,137 @@
+accses = False
+def game():
+    #text game
+    BOLD = '\033[1m'
+    END = '\033[0m'
+    health = 100
+    Alive = True
+    while health > 0:
+        usr_nm = input("Enter your user name: ")
+        print (f"Hello {usr_nm}!  Welcome to the text based game!")
+        print(f"You have {health} health remaining")
+        print(f"{BOLD}----Level 1----{END}")
+        lvl1 = input("You see a bear sleeping and you are hungry , What do you do? --- Option 1: Kill it for food (kill) --- Option 2: Leave it be (leave) ")
+        if lvl1 == "kill":
+            print("Very bad choice. You woke the bear as you had no tools. --- Lose 50 health!")
+            health = health - 50
+            print(f"You have {health} health remaining")
+        if lvl1 == "leave":
+            print("Good Choice! With your bear hands you would not have stood a chance.")
+            print(f"You have {health} health remaining")
+        if Alive == True:
+            print(f"{BOLD}----Level 2----{END}")
+            lvl2 = input("You find a cave on your travels ,What do you do? --- Option 1: Enter cave (enter) --- Option 2: Ignore and continue (ignore) ")
+            if lvl2 == "enter":
+                print("Good choice! In the cave you found a bed for the night , a open fire and plenty of food.")
+            print(f"You have {health} health remaining")
+            if lvl2 == "ignore":
+                health = health - 20 
+                print("Bad choice. The cave had essentials to keep you alive. --- Lose 20 health!")
+                print(f"You have {health} health remaining")
+        if health <= 0:
+            print(f"{BOLD}You died! ---GAME OVER---{END}")
+            break
+        if Alive == True:
+            print(f"{BOLD}----Level 3----{END}")
+            lvl3 = input("You see a abandoned cabin , What do you do? --- Option 1: Enter the cabin (enter) --- Option 2: Ignore and continue (ignore) ")
+            if lvl3 == "enter":
+                print("Very bad choice. An old man lives inside and hits you multipule times with his cane. --- Lose 50 health! ")
+                health = health - 50
+                print(f"You have {health} health remaining")
+            if lvl3 == "ignore":
+                print("Good choice! An old man lived iside who would have hit you with his cane.")
+                print(f"You have {health} health remaining")
+        if health <= 0:
+            print(f"{BOLD}You died! ---GAME OVER---{END}")
+            break
+        if Alive == True:
+            print(f"{BOLD}----Level 4----{END}")
+            lvl4 = input("You find a pond , What do you do? --- Option 1: Drink the water (drink) --- Option 2: Ignore and continue (ignore) ")
+            if lvl4 == "drink":
+                print("Bad choice. The water was contaminated and you get sick. --- Lose 20 health! ")
+                health = health - 20
+            if lvl4 == "ignore":
+                print("Good choice! The water was contaminated.")
+
+        if health <= 0:
+            print(f"{BOLD}You died! ---GAME OVER---{END}")
+            break 
+        else:
+            print(f"{BOLD}You survived all the levels! ---!YOU WIN!---{END}")
+            break      
+def holiday_budget():
+    opt = input("Convert and budget or just budget (enter 'convert' or 'budget'): ")
+    if opt == "convert":
+        money = float(input("Enter amount of money you have remaining (GBP): "))
+        days = float(input("Enter days left on holiday: "))
+        print (money/days*1.36, "USD per day")
+    else:
+        money2 = float (input("Enter amount of money you have remaining (USD): "))
+        days2 = float(input("Enter days left on holiday: "))
+        print (money2/days2,"USD per day")
+def pas_block():
+    global accses
+    is_valid = False #switch is off
+    while is_valid == False: #when switch is off run code 
+        is_valid = True # switch is on 
+        password = input("Enter your password: " ) 
+    if len(password) < 8:
+        is_valid = False
+        print("Error: Too short!")
+    if len(password) > 25:
+        is_valid = False
+        print("Error: Too long!")
+    if password.islower():
+        is_valid = False
+        print("Error: Needs at least one uppercase character" )
+    #checking if any charcater is a digit 
+    has_digit = False
+    for char in password: #for evey charcter hceck if any has a digit 
+        if char.isdigit():
+            has_digit = True
+    if has_digit == False:
+        is_valid = False
+        print("Error: Needs at least one number!")
+        if "@" not in password and "!" not in password and "?" not in password:
+            is_valid = False
+            print("Error: Needs a symbol!")
+    if is_valid == True: #if all other 'ifs' have been ingored the witch will stay on meaning the loop ends 
+        accses = True
+        print("Success")
+def simp_calc():
+    Loop = False
+    while Loop == False:
+        num1  = float(input("Enter your first number: "))
+        inp = input("What would you like to do (+,-,*,/): ")
+        num2 = float(input("Enter your seccond number: "))
+        if inp == "+":
+            print(num1 + num2)
+        elif inp == "-":
+            print(num1 - num2)
+        elif inp == "*":
+            print(num1 * num2)
+        elif inp == "/":
+            print(num1 / num2)
+        else:
+            print("Error")
+        inp2 = input("Would you like to preform another calculation? ")
+        if inp2 == "yes":
+            Loop = False
+            inp2 == inp2
+        if inp2 == "no":
+            Loop = True
+            inp2 == inp2   
+while accses == False:
+    pas_block()
+
+
+qu = input("What would you like to open? (Game , Budget , Calc)")
+if qu == "game":
+        game()
+if qu == "budget":
+        holiday_budget()
+        
+if qu == "calc":
+        simp_calc()
+else:
+        print("Error! Enter a app name")
