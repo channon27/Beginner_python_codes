@@ -1,45 +1,48 @@
 # 🚀 My Python Journey (Year 9)
 
-[![Payhip](https://img.shields.io/badge/Payhip-Visit_My_Store-blue?style=for-the-badge&logo=payhip)](https://payhip.com/b/0aoGj)
-
-Welcome to my repository! I’m a 13-year-old developer from England. I’m currently building Python projects to fund my trip to **Orlando** on February 16!
+Welcome to my official repository! I am a **13-year-old developer from England** currently documenting my progress as I build increasingly complex software. This repo is a timeline of my growth, from basic logic to advanced game systems.
 
 ---
 
-## 🏗️ Featured Project: All-In-One Suite
-**Current Version:** V1.0 (Stable)  
-**Upcoming:** 🛠️ **V2.0 is currently in development!**
+# 🎮 Main Focus: Game V2 (The Masterpiece)
 
-My "Big Software" project is a massive step up—it integrates my best tools into a single, unified program. While V1 is fully functional, I am currently porting over my newest "V2" logic to make the entire suite more robust.
+**Game V2** is my current flagship project. It is my largest code-hit to date, surpassing my previous record by over **2x** in length and complexity. It’s not just a script; it’s a fully functioning engine with state management and modular logic.
 
----
+### 💎 Key Engineering Features
+* **Massive Architecture:** 400+ lines of Python code structured with reusable functions.
+* **State Management:** Uses a central `game_state` dictionary to track HP, Gold, Shields, and Inventory across the entire game.
+* **Advanced Combat System:** A multi-stage Boss Level (`boss_lvl`) featuring a custom `attack()` function that calculates damage based on weapon tiers—ranging from a "Wooden Stick" to the "Starforged Blade."
+* **Modular Levels:** Includes `lvl1` through `lvl4`, shop systems, and traveling mechanics that flow into a final throne room encounter.
 
-## 📂 Project Breakdown & Recent Updates
-
-### 🎮 Forest Adventure Game
-* **Levels:** 4 Unique Levels.
-* **V2 Upgrade:** Now completely **Error-Proof** (handles invalid inputs) and features a **Database** integration to keep track of player data.
-* **Logic:** Uses a dynamic Game Loop to maintain narrative flow.
-
-### 💱 Holiday Budget Tool (Currency Converter)
-* **V2 Upgrade:** Added a **Loop** for continuous calculations and made the script **Error-Proof** to prevent crashes during currency entry.
-* **Logic:** Clean 9-line core script optimized for quick conversions.
-
-### 🔐 Password System v1
-* **Feature:** Persistent security gate.
-* **Logic:** Uses a `while` loop that remains active until the correct password is entered.
-
-### 🔢 Calculator Rewrite
-* **Feature:** Perform multiple calculations in a single session.
-* **Logic:** Loop-based structure to prevent the script from closing after one use.
+### 🛠️ Current Development (In Progress)
+* **Shield Mechanics:** Building a damage-absorption buffer to balance the difficulty.
+* **Global Leaderboard:** Implementing file handling to save and display high scores.
+* **Refinement:** Polishing logic loops and fixing variable scoping for smoother gameplay.
 
 ---
 
-## 🛠️ Technical Progress
-I am currently focusing on **Software Stability**. This means:
-1.  **Input Validation:** Ensuring the program doesn't crash if a user types the wrong thing.
-2.  **Persistence:** Using databases to save information even after the program closes.
-3.  **Efficiency:** Integrating individual scripts into "Big Software" builds.
+# 📂 Project Portfolio
+
+### 🌲 Forest Adventure Game
+An exploration-based game (V2) that served as the foundation for my current game logic.
+
+### 🔐 Password Game V1
+A security-focused project that uses refactored validation logic and loops to test user inputs.
+
+### 💰 Holiday Budgeter
+A practical tool for calculating expenses, featuring refactored input handling and error checks.
+
+### 🧮 Simple Calculator
+One of my early projects focusing on mathematical operators and core Python functionality.
 
 ---
 
+# 📈 About Me
+* **Age:** 13 (Year 9)
+* **Location:** England 🇬🇧
+* **Experience:** Self-taught developer building projects to fund my journey and improve my software engineering skills.
+* **Status:** Currently pushing the boundaries of what I can build in Python!
+
+> "This project is my best work yet, and it's only the beginning."
+
+---
